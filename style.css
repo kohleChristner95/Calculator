@@ -1,0 +1,145 @@
+body {
+  background-color: rgb(17, 102, 94);
+}
+
+.calculator-body {
+  width: 400px;
+  height: 550px;
+  border-radius: 15px;
+  background-color: black;
+  position: absolute; /*Can also be `fixed`*/
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: auto;
+  /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+#input {
+  border: none;
+  background-color: rgb(138, 14, 14);
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 24pt;
+  color: aliceblue;
+}
+
+#clear {
+  background-color: rgb(78, 78, 78);
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 45px;
+  font-size: 24pt;
+}
+
+.button {
+  border-radius: 5px;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  font-size: 24pt;
+  color: white;
+}
+
+.number {
+  background-color: rgb(78, 78, 78)
+}
+
+.operator {
+  background-color: rgb(0, 0, 175);
+}
+
+#seven {
+  position: absolute;
+  top: 100px;
+  left: 16px;
+}
+
+#eight {
+  top: 100px;
+  left: 112px;
+}
+
+#nine {
+  top: 100px;
+  left: 208px;
+}
+
+#divide {
+  top: 100px;
+  left: 304px;
+}
+
+#four {
+  top: 200px;
+  left: 16px;
+}
+
+#five {
+  top: 200px;
+  left: 112px;
+}
+
+#six {
+  top: 200px;
+  left: 208px;
+}
+
+#multiply {
+  top: 200px;
+  left: 304px;
+}
+
+#one {
+  top: 300px;
+  left: 16px;
+}
+
+#two {
+  top: 300px;
+  left: 112px;
+}
+
+#three {
+  top: 300px;
+  left: 208px;
+}
+
+#subtract {
+  top: 300px;
+  left: 304px;
+}
+
+#zero {
+  top: 400px;
+  left: 16px;
+}
+
+#period {
+  top: 400px;
+  left: 112px;
+}
+
+#equals {
+  top: 400px;
+  left: 208px;
+}
+
+#plus {
+  top: 400px;
+  left: 304px;
+}
