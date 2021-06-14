@@ -12,18 +12,18 @@
 <body ng-controller="btnController">
     <div class="calculator-body">
         <button id="clear">Clear</button>
-        <input type="text" id="input" ng-click="inputValue" value="{{ inputValue }}">
-        <button class="button number" id="seven">7</button>
-        <button class="button number" id="eight">8</button>
-        <button class="button number" id="nine">9</button>
+        <input type="value" id="input" value="{{ inputValue }}">
+        <button class="button number" id="seven" ng-click="addOn(seven); getInputValue();">7</button>
+        <button class="button number" id="eight" ng-click="addOn(eight)">8</button>
+        <button class="button number" id="nine" ng-click="addOn(nine)">9</button>
         <button class="button operator" id="divide">/</button>
-        <button class="button number" id="four">4</button>
-        <button class="button number" id="five">5</button>
-        <button class="button number" id="six">6</button>
+        <button class="button number" id="four" ng-click="addOn(four)">4</button>
+        <button class="button number" id="five" ng-click="addOn(five)">5</button>
+        <button class="button number" id="six" ng-click="addOn(six)">6</button>
         <button class="button operator" id="multiply">*</button>
-        <button class="button number" id="one">1</button>
-        <button class="button number" id="two">2</button>
-        <button class="button number" id="three">3</button>
+        <button class="button number" id="one" ng-click="addOn(one)">1</button>
+        <button class="button number" id="two" ng-click="addOn(two)">2</button>
+        <button class="button number" id="three" ng-click="addOn(three)">3</button>
         <button class="button operator" id="subtract">-</button>
         <button class="button number" id="zero">0</button>
         <button class="button operator" id="period">.</button>
