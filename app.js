@@ -12,9 +12,6 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     $scope.eight = '8'
     $scope.nine = '9'
     $scope.inputValue = '';
-    $scope.getInputValue = function () {
-        console.log($scope.inputValue)
-    }
     
     $scope.addOn = function(num) {
         $scope.inputValue = $scope.inputValue + num;
