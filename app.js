@@ -19,5 +19,10 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     $scope.addOn = function(num) {
         $scope.inputValue = $scope.inputValue + num;
     }
+
+    $scope.clearInputValue = () => {
+        return $scope.inputValue = '';
+        console.log($scope.inputValue)
+    }
     
 })
