@@ -24,11 +24,11 @@
         <button class="button number" id="one" ng-click="addOn(one)">1</button>
         <button class="button number" id="two" ng-click="addOn(two)">2</button>
         <button class="button number" id="three" ng-click="addOn(three)">3</button>
-        <button class="button operator" id="subtract">-</button>
+        <button class="button operator" id="subtract" ng-click="minus()">-</button>
         <button class="button number" id="zero" ng-click="addOn(zero)">0</button>
         <button class="button operator" id="period">.</button>
-        <button class="button operator" id="equals">=</button>
-        <button class="button operator" id="plus">+</button>
+        <button class="button operator" id="equals" ng-click="eval()">=</button>
+        <button class="button operator" id="plus" ng-click="add()">+</button>
 
     </div>
 </body>
