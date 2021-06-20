@@ -17,15 +17,7 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     }
     
     $scope.addOn = function(num) {
-        console.log('inputvalue:', $scope.inputValue)
-        console.log('passed num', num);
-        if (num === '0') {
-            $scope.inputValue = '0'
-        }
         $scope.inputValue = $scope.inputValue + num;
     }
     
-    console.log($scope.inputValue)
-    console.log(typeof($scope.inputValue), $scope.inputValue)
-
 })
