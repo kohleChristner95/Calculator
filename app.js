@@ -1,6 +1,7 @@
 let myApp = angular.module('myApp', []);
 
 myApp.controller('btnController', function($scope, $rootScope, $log) {
+    // initialize numbers and other variables
     $scope.zero = 0
     $scope.one = 1
     $scope.two = 2
@@ -14,12 +15,13 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     $scope.period = '.'
     $scope.inputValue = '';
     
+    // initialize operator arrays that will be used when evaluating
     let subtractArray;
     let multiplyArray;
     let divideArray;
     let addArray;
 
-    // initializes calculator values
+    // function that initializes calculator values
     const initialize = () => {
         // Added arrays for specific functionality
         subtractArray = [];
@@ -29,7 +31,7 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     }
     initialize();
 
-    // Opterator functions
+    // Operator functions
     $scope.add = () => {
         addArray.push($scope.inputValue);
         $scope.inputValue = '';
@@ -71,11 +73,13 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
         initialize();
     }
     
+    // Adds onto the end of the number in the text box
     $scope.addOn = function(num) {
         $scope.inputValue = $scope.inputValue + num;
         console.log($scope.inputValue);
     }
     
+    // Clears all input values and resets data
     $scope.clearInputValue = () => {
         $scope.inputValue = '';
         initialize();
