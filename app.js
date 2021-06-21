@@ -10,14 +10,18 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     $scope.six = 6
     $scope.seven = 7
     $scope.eight = 8
-    $scope.nine = 9
+    $scope.nine = 9;
+    $scope.period = '.'
     $scope.inputValue = '';
     
     let subtractArray;
     let multiplyArray;
     let divideArray;
     let addArray;
+
+    // initializes calculator values
     const initialize = () => {
+        // Added arrays for specific functionality
         subtractArray = [];
         multiplyArray = [];
         divideArray = [];
@@ -46,9 +50,8 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
         $scope.inputValue = '';
     }
 
-    $scope.eval = () => {
-        // console.log('heeeere', addArray)
-        
+    // Evaluates appropriate array
+    $scope.eval = () => {        
         if (addArray.length > 0) {
             addArray.push($scope.inputValue)
             $scope.inputValue = Number(addArray[0]) + Number(addArray[1]);
