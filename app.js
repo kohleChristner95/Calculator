@@ -76,7 +76,6 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     // Adds onto the end of the number in the text box
     $scope.addOn = function(num) {
         $scope.inputValue = $scope.inputValue + num;
-        console.log($scope.inputValue);
     }
     
     // Clears all input values and resets data
