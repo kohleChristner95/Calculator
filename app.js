@@ -13,23 +13,58 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     $scope.nine = 9
     $scope.inputValue = '';
     
-    let arr;
-    $scope.arr;
+    let subtractArray;
+    let multiplyArray;
+    let divideArray;
+    let addArray;
     const initialize = () => {
-    $scope.arr = [];
-    arr = $scope.arr
+        subtractArray = [];
+        multiplyArray = [];
+        divideArray = [];
+        addArray = [];
     }
     initialize();
-    
+
+    // Opterator functions
     $scope.add = () => {
-        arr.push($scope.inputValue);
+        addArray.push($scope.inputValue);
         $scope.inputValue = '';
-        console.log(arr);
+    }
+
+    $scope.subtract = () => {
+        subtractArray.push($scope.inputValue);
+        $scope.inputValue = '';
+    }
+
+    $scope.multiply = () => {
+        multiplyArray.push($scope.inputValue);
+        $scope.inputValue = '';
+    }
+
+    $scope.divide = () => {
+        divideArray.push($scope.inputValue);
+        $scope.inputValue = '';
     }
 
     $scope.eval = () => {
-        arr.push($scope.inputValue);
-        $scope.inputValue = Number(arr[0]) + Number(arr[1])
+        // console.log('heeeere', addArray)
+        
+        if (addArray.length > 0) {
+            addArray.push($scope.inputValue)
+            $scope.inputValue = Number(addArray[0]) + Number(addArray[1]);
+        }
+        else if (subtractArray.length > 0) {
+            subtractArray.push($scope.inputValue)
+            $scope.inputValue = Number(subtractArray[0]) - Number(subtractArray[1]);
+        }
+        else if (multiplyArray.length > 0) {
+            multiplyArray.push($scope.inputValue);
+            $scope.inputValue = Number(multiplyArray[0] * multiplyArray[1]);
+        }
+        else if (divideArray.length > 0) {
+            divideArray.push($scope.inputValue);
+            $scope.inputValue = Number(divideArray[0] / divideArray[1]);
+        }
         initialize();
     }
     
@@ -41,12 +76,6 @@ myApp.controller('btnController', function($scope, $rootScope, $log) {
     $scope.clearInputValue = () => {
         $scope.inputValue = '';
         initialize();
-        console.log(arr, $scope.inputValue)
     }
-
-    $scope.minus = () => {
-        $scope.inputValue = $scope.inputValue + '-';
-    }
-
     
 })
